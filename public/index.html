@@ -1,0 +1,121 @@
+  <html>
+    <head>
+      <meta charset="utf-8"/>
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
+      <script src="js/jquery-3.1.1.js"></script>
+      <script src="materialize/js/materialize.js"></script>
+      <script src="js/down_values.js"></script>
+      <link type="text/css" rel="stylesheet" href="styles.css">
+    </head>
+
+  <body>
+  <div class="row">
+    <nav class="cyan darken-3">
+    <div class="nav-wrapper">
+      <ul id="nav-mobile" class="left hide-on-med-and-down">
+        <li><a href="index.html">Peliculas</a></li>
+        <li><a href="">Otro</a></li>
+      </ul>
+    </div>
+  </nav>
+
+      <center>
+        <br><br>
+        <h3>Películas</h3>
+        <br>
+      </center>
+
+      <div style="width: 90%; margin:auto">
+
+        <!-- Ventanas modales -->
+
+        <div class="col s12">
+            <!-- Modal Trigger -->
+            <a class="btn-floating btn-large waves-effect waves-light green darken-1 modal-trigger" style="float: right"  href="#modal1"><i class="material-icons">add</i></a>
+            <!-- Modal Structure -->
+
+            <div id="modal1" class="modal" style="padding-left:50px; padding-right:50px; min-height: 550px">
+              <div class="modal-content">
+                <center><h4>Registrar nueva película</h4></center>
+
+                <div class="row">
+                  <form id="frm_pelicula" method="post" enctype="multipart/form-data">
+
+                  <div class="row">
+                    <div class=" input-field col s12">
+                      <input id="titulo" name="titulo" type="text" class="validate">
+                      <label for="icon_prefix">Título película</label>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class=" input-field col s12">
+                      <input id="sinopsis" name="sinopsis" type="text" class="validate">
+                      <label for="icon_prefix">Sinopsis</label>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="input-field col s12">
+                      <input id="resena" name="resena" type="text" class="validate">
+                      <label for="icon_prefix">Reseña</label>
+                    </div>
+                  </div>
+                  <div class="row">
+                      <div class="input-field col s12">
+                        <input id="fecha" name="fecha" type="date" class="validate">
+                        <label for="icon_prefix">Fecha de estreno:</label>
+                      </div>
+                    </div>
+                  <div class="row">
+                    <div class="file-field input-field col s8">
+                      <div class="btn">
+                        <span>Poster</span>
+                        <input type="file" id="poster" name="poster[]">
+                      </div>
+                      <div class="file-path-wrapper">
+                        <input class="file-path validate" type="text">
+                      </div>
+                    </div>
+                    <div class="modal-footer col s4">
+                      <br>
+                      <a href="#!" class="modal-close waves-effect waves-green btn-flat" onclick="addPelicula()">Registrar</a>
+                    </div>
+                  </div>
+                </form>
+
+              </div>
+            </div>
+            </div>
+
+          <!-- Ventana Modal 2, Muestra más información sobre las películas -->
+            <!-- Modal Structure -->
+
+            <div id="modal2" class="modal" style="min-height: 600px">
+              <div class="modal-content" style="padding-left:50px; padding-right:50px; min-height: 600px">
+                <div class="row">
+                  <div id="principal">
+
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+        <!--------------FIN DE VENTANAS MODAL ---------------------- -->
+
+        <br><br>
+
+        <div id="pelis" class="row col s12">
+
+          <!---------------------------- AQUÍ VA EL CONTENIDO DE LAS PELÍCULAS EXTRAIDOS DE LA API --------------- -->
+
+          <div id="divPelis">
+
+          </div>
+
+        </div>
+
+    </div>
+  </body>
+  </html>

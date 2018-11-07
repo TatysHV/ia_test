@@ -1,0 +1,6 @@
+{
+    "require": {
+       "phpoffice/phpword": "v0.14.*",
+        "slim/slim": "^3.0"
+    }
+}
